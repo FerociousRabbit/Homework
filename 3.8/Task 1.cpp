@@ -13,11 +13,16 @@ int main()
 
         sum = sum + a;
 
-        if (max < a)
+        if (j == 0)
         {
             max = a;
         }
-        if (min == 0)
+        
+        else if (max < a)
+        {
+            max = a;
+        }
+        if (j == 0)
         {
             min = a;
         }
