@@ -1,21 +1,21 @@
-#include <stdio.h>
+#include <iostream>
 
-int main()
+int main(void)
 {
-    int j=0;
-    printf("Введите размер массива:");
-    scanf("%i", &j);
-    int mas[j];
+    size_t n;
+    std::cin >> n;
 
-    printf("Введите значения массива\n");
+    long *arr = new long[n];
 
-    for(int i=0; i<j;i++)
+    for (size_t i = 0; i < n; i++)
     {
-        scanf("%i", &mas[i]);
+        arr[i] = i;
     }
-    
-    for(int i=0; i<j;i++)
+
+    for (size_t i = 0; i < n; i++)
     {
-        printf("%i ", mas[i]);
+        std::cout << arr[i] << " ";
     }
+
+    delete [] arr;
 }
